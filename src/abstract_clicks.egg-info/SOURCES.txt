@@ -8,6 +8,13 @@ src/abstract_clicks.egg-info/SOURCES.txt
 src/abstract_clicks.egg-info/dependency_links.txt
 src/abstract_clicks.egg-info/requires.txt
 src/abstract_clicks.egg-info/top_level.txt
+src/abstract_clicks/auto_utils/__init__.py
+src/abstract_clicks/auto_utils/auto_utils.py
+src/abstract_clicks/auto_utils/browser_utils.py
+src/abstract_clicks/auto_utils/click_utils.py
+src/abstract_clicks/auto_utils/imports.py
+src/abstract_clicks/auto_utils/tester.py
+src/abstract_clicks/auto_utils/windowMonitor.py
 src/abstract_clicks/flask_app/__init__.py
 src/abstract_clicks/flask_app/wsgi.py
 src/abstract_clicks/flask_app/getRecieve/__init__.py
