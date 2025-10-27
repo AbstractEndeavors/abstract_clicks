@@ -1,0 +1,28 @@
+{
+  "examplepage": {
+    "url": "https://example.com",
+    "title": "examplepage",
+    "browser_title": "Example Domain",
+    "window_id": "48234558",
+    "pid": "960834",
+    "html": null,
+    "soup": null,
+    "tab_index": null
+  },
+  "chatgpt": {
+    "url": "https://chatgpt.com",
+    "title": "chatgpt",
+    "browser_title": "Just a moment...",
+    "window_id": "48234558",
+    "pid": "960834",
+    "html": null,
+    "soup": null,
+    "tab_index": null
+  },
+  "Example Domain": {
+    "window_id": "52428862",
+    "title": "Example Domain \u2014 Mozilla Firefox",
+    "pid": "6504",
+    "url": "https://example.com"
+  }
+}

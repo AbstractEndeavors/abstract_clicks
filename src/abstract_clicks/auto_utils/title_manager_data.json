@@ -1,0 +1,32 @@
+{
+  "Example Domain": {
+    "url": "https://example.com",
+    "title": "Example Domain",
+    "browser_title": "Example Domain",
+    "window_id": null,
+    "pid": null,
+    "html": null,
+    "soup": null,
+    "tab_index": null
+  },
+  "chatgpt": {
+    "url": "https://chatgpt.com",
+    "title": "chatgpt",
+    "browser_title": "Just a moment...",
+    "window_id": null,
+    "pid": null,
+    "html": null,
+    "soup": null,
+    "tab_index": null
+  },
+  "My Permanent Tab": {
+    "url": "https://example.com",
+    "title": "Example Domain",
+    "browser_title": "Example Domain",
+    "window_id": null,
+    "pid": null,
+    "html": null,
+    "soup": null,
+    "tab_index": null
+  }
+}
