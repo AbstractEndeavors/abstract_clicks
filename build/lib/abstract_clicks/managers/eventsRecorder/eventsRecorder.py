@@ -18,7 +18,7 @@ class EventsRecorder(metaclass=SingletonMeta):
         if refresh:
             self.initialized = False
         self.default_events_path = get_default_session_path()
-        self.events_path = get_events_path(events_path)
+        self.events_path = get_events_path(events_path,default=self.default_events_path)
         self.start_time = start_time or now()
         self.events: List[Dict[str, Any]] = []
         self.all_events: Dict[str, List[Dict[str, Any]]] = {}
@@ -76,7 +76,7 @@ class EventsRecorder(metaclass=SingletonMeta):
         if key == keyboard.Key.esc:
             # Save under 'default'
             self.all_events['default'] = self.events
-            safe_dump_to_file(data=self.all_events, file_path=self.default_events_path)
+            safe_dump_to_file(data=self.all_events, file_path=self.events_path)
             print(f"Saved {len(self.events)} events under 'default' to {self.events_path}")
             if self.keyboard_listener:
                 self.keyboard_listener.stop()
@@ -109,7 +109,7 @@ class EventsRecorder(metaclass=SingletonMeta):
             self.keyboard_listener and self.keyboard_listener.running
         ):
             time.sleep(0.1)
-        return self.default_events_path
+        return self.events_path
 
 
     def _preprocess_events(self, events: List[Dict], speed_factor: float, min_move_distance: float) -> List[Dict]:
