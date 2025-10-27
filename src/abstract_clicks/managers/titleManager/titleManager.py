@@ -1,5 +1,9 @@
 from ...imports import *
 from abstract_utilities import SingletonMeta
+def assure_storage_path(file_path):
+    if not os.path.isfile(file_path):
+        safe_dump_to_file(data={},file_path=file_path)
+    
 class titleManager(metaclass=SingletonMeta):
     """Comprehensive title manager for browser windows."""
     def __init__(self, storage_path=None):
@@ -12,7 +16,8 @@ class titleManager(metaclass=SingletonMeta):
     def load_titles(self):
         """Load titles from storage file."""
         try:
-            if read_from_file(self.storage_path):
+            assure_storage_path(self.storage_path)
+            if os.path.isfile(self.storage_path):
                 with open(self.storage_path, 'r') as f:
                     data = json.load(f)
                     self.titles = {k: v for k, v in data.items() if isinstance(v, dict)}
