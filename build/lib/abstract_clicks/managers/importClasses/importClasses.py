@@ -1,4 +1,4 @@
-from abstract_gui.QT5 import getUserInputwindow
+
 class getAutoGui:
     def __init__(self):
         
@@ -15,7 +15,7 @@ class getUserInput:
         
         self.getUserInputwindow = None
     def user_input_window(self):
-        from abstract_gui import getUserInputwindow
+        from abstract_gui.QT5 import getUserInputwindow
         return getUserInputwindow
     def get_user_input_window(self):
         if self.getUserInputwindow == None:
