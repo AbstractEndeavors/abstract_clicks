@@ -1,4 +1,4 @@
-from .utils import *
+from ...imports import *
 from abstract_utilities import SingletonMeta
 class titleManager(metaclass=SingletonMeta):
     """Comprehensive title manager for browser windows."""

@@ -17,7 +17,6 @@ import subprocess
 from pynput import keyboard
 
 # Example creds
-login_creds = ['jrputkey@sbcglobal.net','Boudin55']
 
 
 
@@ -47,5 +46,5 @@ def on_release(key):
     if key in [keyboard.Key.ctrl_l, keyboard.Key.ctrl_r]:
         ctrl_held = False
 
-with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+with keyboard.Listener() as listener:
     listener.join()

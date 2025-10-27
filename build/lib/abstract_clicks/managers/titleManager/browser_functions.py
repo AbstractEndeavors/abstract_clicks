@@ -115,26 +115,7 @@ elif platform.system() == 'Darwin':  # macOS
     except ImportError:
         NSScreen = NSWorkspace = None
 
-def call_soup(url=None, soup=None):
-    """Retrieve BeautifulSoup object for a URL or return existing soup."""
-    if url and not soup:
-        soup = get_soup(url)
-    return soup
 
-def get_title(url=None, soup=None):
-    """Extract the title from a URL or BeautifulSoup object."""
-    try:
-        soup = call_soup(url=url, soup=soup)
-        if not soup:
-            return ""
-        title_tag = soup.find("title")
-        if not title_tag:
-            return ""
-        title = str(title_tag).split('>')[1].split('<')[0]
-        return title.strip()
-    except Exception as e:
-        print(f"Error getting title: {e}")
-        return ""
 
 def get_html_content(html_content=None, title="My Permanent Tab"):
     """Generate default HTML content if none provided."""

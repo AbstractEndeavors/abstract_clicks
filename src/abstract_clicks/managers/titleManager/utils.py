@@ -1,4 +1,3 @@
-
 import subprocess
 import platform
 import psutil
@@ -18,6 +17,7 @@ import subprocess
 import psutil
 import time
 import pyautogui
+from .titleManager import *
 def is_window_open(url=None, title=None, browser_title=None):
     """Check if a window exists with the given title, browser title, or URL."""
     titles = [t for t in [title, browser_title] if t]
@@ -400,5 +400,5 @@ def open_browser_with_devtools(url=None, title="My Permanent Tab", html_file_pat
         fullscreen=fullscreen,
         inspect=True
     )
-browser_js = get_browser_tab_and_index(url = 'https://chatgpt.com',title = "chatgpt")
+##browser_js = get_browser_tab_and_index(url = 'https://chatgpt.com',title = "chatgpt")
 

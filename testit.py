@@ -1,2 +1,3 @@
 from src.abstract_clicks.managers import *
-clipboad_mgr = ClipboardManager()
+events_mgr = EventsRecorder()
+events_mgr.start_recording()

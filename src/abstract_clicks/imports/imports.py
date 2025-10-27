@@ -26,6 +26,7 @@ from abstract_utilities import (SingletonMeta,
                                 )
 from abstract_utilities.class_utils import get_class_inputs as get_inputs
 from abstract_utilities.compare_utils import get_closest_match_from_list
+from abstract_webtools import get_soup
 from pynput import mouse, keyboard
 from random import uniform
 import base64
@@ -153,3 +154,23 @@ def now() -> float:
 
 def elapsed(start: float) -> float:
     return now() - start
+def call_soup(url=None, soup=None):
+    """Retrieve BeautifulSoup object for a URL or return existing soup."""
+    if url and not soup:
+        soup = get_soup(url)
+    return soup
+
+def get_title(url=None, soup=None):
+    """Extract the title from a URL or BeautifulSoup object."""
+    try:
+        soup = call_soup(url=url, soup=soup)
+        if not soup:
+            return ""
+        title_tag = soup.find("title")
+        if not title_tag:
+            return ""
+        title = str(title_tag).split('>')[1].split('<')[0]
+        return title.strip()
+    except Exception as e:
+        print(f"Error getting title: {e}")
+        return ""

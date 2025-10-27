@@ -573,6 +573,6 @@ def get_browser_coordinates(url=None, title=None, browser_title=None, window_id=
     return titlemanager.get_window_coordinates(url=url, title=title, browser_title=browser_title, window_id=window_id)
 
 
-browser_js = get_browser_tab_and_index(url = 'https://chatgpt.com',title = "chatgpt")
+##browser_js = get_browser_tab_and_index(url = 'https://chatgpt.com',title = "chatgpt")
 
 
